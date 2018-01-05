@@ -1,0 +1,138 @@
+.text-o {
+  color: rgb(242, 165, 16);
+}
+
+.text-pink {
+  color: rgb(138, 175, 255);
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Microsoft JhengHei", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  position: relative;
+  text-align: justify;
+  text-justify: auto;
+  height: 100vh;
+  width: 100%;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  border-radius: 50%;
+  /* background-color: rgb(39, 40, 42); */
+  /* background-color: rgb(255, 247, 231); */
+  background-image: url(bg.jpg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  /* top: 50%; */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ballUp 0.5s 1s both, ballDown 0.2s 1.5s ease-in forwards, wrapperIn 0.3s 1.7s forwards;
+}
+
+
+/* =================================== */
+
+@keyframes ballUp {
+  0% {
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1
+  }
+  100% {
+    top: 10%;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@keyframes ballDown {
+  0% {
+    top: 10%;
+    width: 10px;
+    height: 10px;
+  }
+  100% {
+    top: 50%;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@keyframes wrapperIn {
+  0% {
+    width: 5px;
+    height: 5px;
+    border-radius: 0%;
+  }
+  100% {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0%;
+  }
+}
+
+.wrapperContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+.text-show-1 {
+  animation: textshow 0.5s 2.2s both;
+}
+
+.text-show-2 {
+  animation: textshow 0.7s 2.8s both;
+}
+
+.text-show-3 {
+  animation: timeshow 0.7s 3.3s both;
+}
+
+.text-show-4 {
+  animation: timeshow 0.7s 3.8s both;
+}
+
+@keyframes textshow {
+  0% {
+    opacity: 0;
+    transform: translate(0, -30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0%);
+  }
+}
+
+@keyframes timeshow {
+  0% {
+    opacity: 0;
+    transform: translate(0, 30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0%);
+  }
+}
+
+
+/* =================================== */
+
+.clock-container {
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
