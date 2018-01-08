@@ -2,7 +2,7 @@ window.setInterval(countDown, 1000);
 
 function countDown() {
   var now = new Date();
-  var future = new Date("02/04/2018 00:00:00");
+  var future = new Date("02/04/2018 12:00:00");
   var timeLeft = future - now;
   var milli = timeLeft;
 
@@ -36,7 +36,8 @@ function countDown() {
   mySpan.innerHTML = timeLeft;
 
   if (milli <= 0) { //Time's run out! If all values go to zero
-    mySpan.innerHTML = "00:00:00";
+    // mySpan.innerHTML = "00:00:00";
+    mySpan.innerHTML = "即將開始";
   }
 }
 
